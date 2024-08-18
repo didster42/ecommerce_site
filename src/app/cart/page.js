@@ -20,7 +20,7 @@ export default function Home() {
         {
           products.map((product) => {
             return (
-              <div className="cart-card-box">
+              <div className="cart-card-box" key={product.id}>
                 <div className="cart-card-image-container">
                   <img className="cart-card-image" src={product.image}/>
                 </div>
@@ -28,7 +28,7 @@ export default function Home() {
                   <h3 className="cart-card-heading">{product.title}</h3>
                   <h5 className="cart-card-cost">{USDollar.format(product.price)}</h5>
                   <div className="cart-card-value-change-container">
-                    
+
                   </div>
                 </div>
               </div>
